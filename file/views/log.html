@@ -1,0 +1,25 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script> <script type="text/javascript"> 
+function text1() {
+    const name = document.getElementById('name').value;
+    location.href = `/log/${name}`;
+}
+    </script>
+        <div style="width:420px;"> 
+        <div id="login">로그</div> 
+            <div id="loginout" style="display:none;"></div> 
+                <hr> 
+                    <div> 
+                        <div> 
+                            <div>
+                                채널 : <input class="text" type="text" id="name" name="name" style="width:100%;"> 
+                            </div> 
+                        </div> 
+                    </div> 
+                <br><div style="padding-left: 182px;"><input type="button" class="btnLogin" title="전송" value="전송" onclick="text1();" ></br> </div> 
+            <div style="text-align:center;"></div> 
+                <div>
+                    <br><span>&#183;</span><a href="/message">메세지</a> 
+                    <br><span>&#183;</span><a href="/embed">임베드</a> 
+                    <br><span>&#183;</span><a href="/png">사진</a> 
+                </div> 

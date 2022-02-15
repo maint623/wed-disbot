@@ -1,0 +1,25 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script> <script type="text/javascript"> 
+function text() {
+    var ajax = $.ajax({ url: "/post", data: "text=" + $("#text").val() + "&ch=" + $("#ch").val(), type: 'POST', success: function (result) 
+    { } }); } 
+</script> 
+<div style="width:420px;"> 
+<div id="login">메세지 보내기</div> 
+    <div id="loginout" style="display:none;"></div> 
+        <hr> 
+            <div> 
+                <div> 
+                    <div>
+                        메세지 : <input class="text" type="text" id="text" name="text" onkeypress="JavaScript:press(this.form)" style="width:100%;"> 
+                        채널 아이디 : <input class="text" type="text" id="ch" name="ch" onkeypress="JavaScript:press(this.form)" style="width:100%;"> 
+                    </div> 
+                </div> 
+            </div> 
+        <br><div style="padding-left: 182px;"><input type="button" class="btnLogin" title="전송" value="전송" onclick="text();" ></br> </div> 
+    <div style="text-align:center;"></div> 
+        <div>
+            <br><span>&#183;</span><a href="/log">로그</a> 
+            <br><span>&#183;</span><a href="/embed">임베드</a> 
+            <br><span>&#183;</span><a href="/png">사진</a> 
+        </div> 

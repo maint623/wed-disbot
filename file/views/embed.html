@@ -1,0 +1,117 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script> <script type="text/javascript"> 
+
+
+function d0() {
+    $("#d1").hide();
+    $("#d2").hide();
+    $("#d3").hide();
+    $("#d4").hide();
+    $("#d5").hide();
+    $("#d11").hide();
+    $("#d22").hide();
+    $("#d33").hide();
+    $("#d44").hide();
+    $("#d55").hide();
+    $("#d111").hide();
+    $("#d222").hide();
+    $("#d333").hide();
+    $("#d444").hide();
+    $("#d555").hide();
+    $("#d1111").hide();
+    $("#d2222").hide();
+    $("#d3333").hide();
+    $("#d4444").hide();
+    $("#d5555").hide();
+}
+function d1() {
+    d0();
+    $("#d1").show();
+    $("#d11").show();
+    $("#d111").show();
+    $("#d1111").show();
+}
+function d2() {
+    d1();
+    $("#d2").show();
+    $("#d22").show();
+    $("#d222").show();
+    $("#d2222").show();
+}
+function d3() {
+    d2();
+    $("#d3").show();
+    $("#d33").show();
+    $("#d333").show();
+    $("#d3333").show();
+}
+function d4() {
+    d3();
+    $("#d4").show();
+    $("#d44").show();
+    $("#d444").show();
+    $("#d4444").show();
+}
+function d5() {
+    d4();
+    $("#d5").show();
+    $("#d55").show();
+    $("#d555").show();
+    $("#d5555").show();
+}
+
+$(document).ready(function(){ 
+    d0();
+ });
+//+ "&Description=" + $("#Description").val() + "&ch=" + $("#ch").val() + "&d1=" + $("#d1").val() + "&d11=" + $("#d11").val()
+function text1() {
+    var ajax = $.ajax({ url: "/embedpost", data: "title=" + $("#title").val() + "&Description=" + $("#Description").val() + "&ch=" + $("#ch").val() + "&d1=" + $("#d1").val() + "&d11=" + $("#d11").val()  + "&d2=" + $("#d2").val() + "&d22=" + $("#d22").val() + "&d3=" + $("#d3").val() + "&d33=" + $("#d33").val() + "&d4=" + $("#d4").val() + "&d44=" + $("#d44").val() + "&d5=" + $("#d5").val() + "&d55=" + $("#d55").val(), type: 'POST', success: function (result) 
+    { } }); } 
+            </script> 
+            <div style="width:420px;"> 
+                <div id="login">임베드 보내기</div> <div id="loginout" style="display:none;"> 
+                </div> 
+                <hr> 
+                <div> 
+                    <div> 
+                        <div>
+                            <div>
+                            <input type="radio" name="d" id="d0" value="기본" oninput="d0();">기본
+                            <input type="radio" name="d" id="db1" value="1" oninput="d1();">1
+                            <input type="radio" name="d" id="db2" value="2" oninput="d2();">2
+                            <input type="radio" name="d" id="db3" value="3" oninput="d3();">3
+                            <input type="radio" name="d" id="db4" value="4" oninput="d4();">4
+                            <input type="radio" name="d" id="db5" value="5" oninput="d5();">5
+                        </div>
+                            타이틀 : <input class="text" type="text" id="title" name="title" style="width:100%;"> 
+                            제목 : <input class="text" type="text" id="Description" name="Description" style="width:100%;"> 
+                            <a id="d111" name="d111">소제목1 : </a><input class="text" type="text" id="d1" name="d1" style="width:100%;"> 
+                            <a id="d1111" name="d1111">내용1 : </a><input class="text" type="text" id="d11" name="d11" style="width:100%;"> 
+                            <a id="d222" name="d222">소제목2 : </a><input class="text" type="text" id="d2" name="d2" style="width:100%;"> 
+                            <a id="d2222" name="d2222">내용2 : </a><input class="text" type="text" id="d22" name="d22" style="width:100%;"> 
+                            <a id="d333" name="d333">소제목3 : </a><input class="text" type="text" id="d3" name="d3" style="width:100%;"> 
+                            <a id="d3333" name="d3333">내용3 : </a><input class="text" type="text" id="d33" name="d33" style="width:100%;"> 
+                            <a id="d444" name="d444">소제목4 : </a><input class="text" type="text" id="d4" name="d4" style="width:100%;"> 
+                            <a id="d4444" name="d4444">내용4 : </a><input class="text" type="text" id="d44" name="d44" style="width:100%;"> 
+                            <a id="d555" name="d555">소제목5 : </a><input class="text" type="text" id="d5" name="d5" style="width:100%;"> 
+                            <a id="d5555" name="d5555">내용5 : </a><input class="text" type="text" id="d55" name="d55" style="width:100%;"> 
+                            채널 아이디 : <input class="text" type="text" id="ch" name="ch" style="width:100%;"> 
+                        </div> 
+                        </div> 
+                    </div> 
+                    <div>
+
+                    </div> 
+                </div> 
+                <div style="padding-left: 182px;"> 
+                    <br> <input type="button" class="btnLogin" title="전송" value="전송" onclick="text1();" > </br> 
+                </div> 
+                <div style="text-align:center;">
+                </div> 
+            </div>
+            <div>
+                <br><span>&#183;</span><a href="/log">로그</a> 
+                <br><span>&#183;</span><a href="/message">메세지</a> 
+                <br><span>&#183;</span><a href="/png">사진</a> 
+            </div> 
+    
